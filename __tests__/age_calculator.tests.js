@@ -9,9 +9,11 @@ describe('Person', () => {
   });
 
   let person;
+  let person2;
 
   beforeEach(() => {
     person = new Person(26, "male", 71, 175, false, 1);
+    person2 = new Person(26, "female", 60, 120, true, 10);
   });
 
   test('should correctly create a person object with age, sex, height, weight, isSmoker, and drinksPerWeek properties', () => {
@@ -26,6 +28,8 @@ describe('Person', () => {
 
   test('calculateLifeExpectancy method should calculate expected life duration based on sex property and set outcome as lifeExpectancy property', () => {
     person.calculateLifeExpectancy();
-    expect(person.lifeExpectancy).toEqual(76.1);
+    person2.calculateLifeExpectancy();
+    expect(person.lifeExpectancy).toEqual(expect.any(Number));
+    expect(person2.lifeExpectancy).toEqual(expect.any(Number));
   });
 });

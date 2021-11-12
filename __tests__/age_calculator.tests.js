@@ -63,6 +63,13 @@ describe('Person', () => {
     const drinkingPerson = new Person(26, "male", 62, 130, false, 8);
     
     drinkingPerson.calculateLifeExpectancy();
-    expect(drinkingPerson.lifeExpectancy).toBeLessThan(76.1);
+    expect(drinkingPerson.lifeExpectancy).toEqual(75.6);
+  });
+
+  test('calculateLifeExpectancy method should deduct 1.5 years if Person drinks more than 14 but less than 25 adult beverages per week', () => {
+    const drinkingPerson = new Person(26, "male", 62, 130, false, 15);
+    
+    drinkingPerson.calculateLifeExpectancy();
+    expect(drinkingPerson.lifeExpectancy).toEqual(74.6);
   });
 });

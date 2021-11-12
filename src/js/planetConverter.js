@@ -13,4 +13,8 @@ export default class PlanetConverter{
       ]
     );
   }
+
+  calculateAge(planet){
+    
+  }
 }

@@ -7,6 +7,10 @@ export class Person{
     this.isSmoker = isSmoker;
     this.drinksPerWeek = drinksPerWeek;
   }
+
+  calculateLifeExpectancy() {
+
+  }
 }
 
 
@@ -14,6 +18,8 @@ export class Person{
 /*
 age on earth
 sex male or female at birth
+male: 76.1
+female: 81.1
 height in inches,
 weight in lbs,
 isSmoker true or false

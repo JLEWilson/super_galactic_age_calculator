@@ -7,6 +7,7 @@ export default class Person{
     this.isSmoker = isSmoker;
     this.drinksPerWeek = drinksPerWeek;
     this.lifeExpectancy = this.calculateLifeExpectancy();
+    this.yearsRemaining = this.calculateYearsRemaining();
   }
 
   calculateLifeExpectancy() {
@@ -59,5 +60,8 @@ export default class Person{
       // do nothing here
     }
     return lifeExpectancy;
-  } 
+  }
+  calculateYearsRemaining(){
+    
+  }
 }

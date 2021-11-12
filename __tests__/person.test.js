@@ -1,4 +1,4 @@
-import {Person} from './../src/age_calculator';
+import {Person} from '../src/js/peron';
 
 describe('Person', () => {
 

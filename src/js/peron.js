@@ -11,7 +11,6 @@ export class Person{
 
   calculateLifeExpectancy() {
     let lifeExpectancy = 0;
-
     //Calculate based on sex. Data from 2017, resource used https://www.advisory.com/en/daily-briefing/2020/07/22/longevity#:~:text=As%20of%202017%2C%20life%20expectancy,with%2083.9%20years%20for%20men.
     switch(this.sex){
       case "male":
@@ -60,18 +59,17 @@ export class Person{
       // do nothing here
     }
     return lifeExpectancy;
-  }
+  } 
 }
 
 
 
 /*
-age on earth
-sex male or female at birth
-male: 76.1
-female: 81.1
-height in inches,
-weight in lbs,
-isSmoker true or false
-drinks per week
+Returns their age in Mercury years. (A Mercury year is .24 Earth years.)
+Returns their age in Venus years. (A Venus year is .62 Earth years.)
+Returns their age in Mars years. (A Mars year is 1.88 Earth years.)
+Returns their age in Jupiter years. (A Jupiter year is 11.86 Earth years.)
+Returns their age in saturn years. (A Saturn year is 29.457 Earth years.) 
+Returns their age in Uranus years. (A Uranus year is 84.3 Earth years.)  84.3 
+Returns their age in Neptune years. (A Neptune year is 164.8 Earth years.)
 */

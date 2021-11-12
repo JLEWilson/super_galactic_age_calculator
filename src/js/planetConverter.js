@@ -17,4 +17,8 @@ export default class PlanetConverter{
   calculateAge(planet){
     return this.conversions.get(planet) * this.person.age;
   }
+
+  calculateYearsRemaining(planet){
+    
+  }
 }

@@ -15,7 +15,11 @@ describe('PlanetConverter', () => {
     expect(planetConverter.person.age).toEqual(26);
   });
 
-  test('calculateAge should pass a string into a map, and return the map keys value multiplied by planetConverter.person.age', () => {
+  test('calculateAge should pass a string into objects conversions map, and return the map keys value multiplied by planetConverter.person.age rounded to tenths place', () => {
     expect(planetConverter.calculateAge("mercury")).toEqual(6.24);
+  });
+
+  test('calculateYearsRemaining should pass a string into objects conversions map, and return the map keys value multiplied by planetConverter.person.yearsRemaining rounded to tenths place', () => {
+    expect(planetConverter.calculateYearsRemaining("mercury")).toEqual(12);
   });
 });

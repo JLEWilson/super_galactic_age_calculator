@@ -49,6 +49,10 @@ export class Person{
     if(this.isSmoker){
       lifeExpectancy -= 10;
     }
+    //calculate based on drinks per week, resource: https://www.health.harvard.edu/blog/sorting-out-the-health-effects-of-alcohol-2018080614427#:~:text=When%20compared%20with%20people%20who,by%20one%20to%20two%20years
+    if(this.drinksPerWeek > 7 && this.drinksPerWeek < 14){
+      lifeExpectancy -= .5;
+    }
     return lifeExpectancy;
   }
 }

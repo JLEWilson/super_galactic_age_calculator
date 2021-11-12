@@ -54,6 +54,10 @@ export class Person{
       lifeExpectancy -= .5;
     } else if(this.drinksPerWeek > 14 && this.drinksPerWeek < 25){
       lifeExpectancy -= 1.5;
+    } else if(this.drinksPerWeek > 25){
+      lifeExpectancy -= 4.5;
+    } else {
+      // do nothing here
     }
     return lifeExpectancy;
   }

@@ -1,4 +1,4 @@
-import {Person} from '../src/js/peron';
+import Person from '../src/js/person';
 
 describe('Person', () => {
 
@@ -39,17 +39,21 @@ describe('Person', () => {
   });
 
   test('calculateLifeExpectancy method should also calculate expected life duration based on weight, seeing if bmi is under healthy range', () => {
-    const underWeightPerson = new Person(26, "male", 62, 60, false, 1); 
-
-    underWeightPerson.calculateLifeExpectancy();
-    expect(underWeightPerson.lifeExpectancy).toBeLessThan(76.1);
+    const underWeightMale = new Person(26, "male", 62, 60, false, 1); 
+    const underWeightFemale = new Person(26, "female", 60, 60, false, 1);
+    underWeightMale.calculateLifeExpectancy();
+    underWeightFemale.calculateLifeExpectancy();
+    expect(underWeightMale.lifeExpectancy).toBeLessThan(76.1);
+    expect(underWeightFemale.lifeExpectancy).toBeLessThan(81.1);
   });
 
   test('calculateLifeExpectancy method should also calculate expected life duration based on weight, seeing if bmi is over healthy range', () => {
-    const overWeightPerson = new Person(26, "male", 62, 500, false, 1); 
-
-    overWeightPerson.calculateLifeExpectancy();
-    expect(overWeightPerson.lifeExpectancy).toBeLessThan(76.1);
+    const overWeightMale = new Person(26, "male", 62, 500, false, 1); 
+    const overWeightFemale = new Person(26, "female", 60, 500, false, 1);
+    overWeightMale.calculateLifeExpectancy();
+    overWeightFemale.calculateLifeExpectancy();
+    expect(overWeightMale.lifeExpectancy).toBeLessThan(76.1);
+    expect(overWeightFemale.lifeExpectancy).toBeLessThan(81.1);
   });
 
   test('calculateLifeExpectancy method should deduct years if Person isSmoker', () => {

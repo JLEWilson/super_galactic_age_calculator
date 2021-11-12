@@ -1,4 +1,4 @@
-export class Person{
+export default class Person{
   constructor(age, sex, height, weight, isSmoker, drinksPerWeek){
     this.age = age;
     this.sex = sex;

@@ -50,8 +50,10 @@ export class Person{
       lifeExpectancy -= 10;
     }
     //calculate based on drinks per week, resource: https://www.health.harvard.edu/blog/sorting-out-the-health-effects-of-alcohol-2018080614427#:~:text=When%20compared%20with%20people%20who,by%20one%20to%20two%20years
-    if(this.drinksPerWeek > 7 && this.drinksPerWeek < 14){
+    if(this.drinksPerWeek > 7 && this.drinksPerWeek <= 14){
       lifeExpectancy -= .5;
+    } else if(this.drinksPerWeek > 14 && this.drinksPerWeek < 25){
+      lifeExpectancy -= 1.5;
     }
     return lifeExpectancy;
   }

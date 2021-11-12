@@ -7,7 +7,7 @@ describe('Person', () => {
   let healthyFemale;
 
   beforeEach(() => {
-    healthyMale = new Person(26, "male", 62, 160, false, 1);
+    healthyMale = new Person(26, "male", 62, 130, false, 1);
     healthyFemale = new Person(26, "female", 60, 115, false, 1);
   });
 
@@ -20,7 +20,7 @@ describe('Person', () => {
     expect(healthyMale.age).toEqual(26);
     expect(healthyMale.sex).toEqual("male");
     expect(healthyMale.height).toEqual(62);
-    expect(healthyMale.weight).toEqual(160);
+    expect(healthyMale.weight).toEqual(130);
     expect(healthyMale.isSmoker).toEqual(false);
     expect(healthyMale.drinksPerWeek).toEqual(1);
   });

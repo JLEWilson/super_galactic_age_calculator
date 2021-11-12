@@ -45,6 +45,10 @@ export class Person{
     } else{
       //healthy range, leave lifeExpectancy the same
     }
+    //calculate based on if they smoke, resource: https://www.nejm.org/doi/full/10.1056/nejmra1308383
+    if(this.isSmoker){
+      lifeExpectancy -= 10;
+    }
     return lifeExpectancy;
   }
 }

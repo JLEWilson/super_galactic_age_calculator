@@ -15,6 +15,6 @@ export default class PlanetConverter{
   }
 
   calculateAge(planet){
-    return planet;
+    return this.conversions.get(planet) * this.person.age;
   }
 }

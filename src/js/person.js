@@ -61,15 +61,3 @@ export default class Person{
     return lifeExpectancy;
   } 
 }
-
-
-
-/*
-Returns their age in Mercury years. (A Mercury year is .24 Earth years.)
-Returns their age in Venus years. (A Venus year is .62 Earth years.)
-Returns their age in Mars years. (A Mars year is 1.88 Earth years.)
-Returns their age in Jupiter years. (A Jupiter year is 11.86 Earth years.)
-Returns their age in saturn years. (A Saturn year is 29.457 Earth years.) 
-Returns their age in Uranus years. (A Uranus year is 84.3 Earth years.)  84.3 
-Returns their age in Neptune years. (A Neptune year is 164.8 Earth years.)
-*/

@@ -45,4 +45,11 @@ describe('Person', () => {
     underWeightPerson.calculateLifeExpectancy();
     expect(underWeightPerson.lifeExpectancy).toBeLessThan(76.1);
   });
+
+  test('calculateLifeExpectancy method should also calculate expected life duration based on weight, seeing if bmi is over healthy range', () => {
+    const underWeightPerson = new Person(26, "male", 62, 500, false, 1); 
+
+    underWeightPerson.calculateLifeExpectancy();
+    expect(underWeightPerson.lifeExpectancy).toBeLessThan(76.1);
+  });
 });

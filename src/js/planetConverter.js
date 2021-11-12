@@ -15,10 +15,12 @@ export default class PlanetConverter{
   }
 
   calculateAge(planet){
-    return this.conversions.get(planet) * this.person.age;
+    let age = this.conversions.get(planet) * this.person.age;
+    return parseFloat(age.toFixed(2));
   }
 
   calculateYearsRemaining(planet){
-    
+    let yearsRemaining = this.conversions.get(planet) * this.person.yearsRemaining;
+    return parseFloat(yearsRemaining.toFixed(2));
   }
 }

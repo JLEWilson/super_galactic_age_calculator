@@ -8,15 +8,8 @@ describe('Person', () => {
     expect(person.age).toEqual(26);
   });
 
-  let person;
-  let person2;
-
-  beforeEach(() => {
-    person = new Person(26, "male", 71, 175, false, 1);
-    person2 = new Person(26, "female", 60, 120, true, 10);
-  });
-
   test('should correctly create a person object with age, sex, height, weight, isSmoker, and drinksPerWeek properties', () => {
+    person = new Person(26, "male", 71, 175, false, 1);
     expect(person.age).toEqual(26);
     expect(person.sex).toEqual("male");
     expect(person.height).toEqual(71);
@@ -27,6 +20,8 @@ describe('Person', () => {
     
 
   test('calculateLifeExpectancy method should calculate expected life duration based on sex property and set outcome as lifeExpectancy property', () => {
+    const person = new Person(26, "male", 62, 175, false, 1);
+    const person2 = new Person(26, "female", 60, 120, true, 10);
     person.calculateLifeExpectancy();
     person2.calculateLifeExpectancy();
     expect(person.lifeExpectancy).toEqual(76.1);
@@ -34,6 +29,8 @@ describe('Person', () => {
   });
 
   test('calculateLifeExpectancy method should also calculate expected life duration based on height property', () => {
+    const person = new Person(26, "male", 75, 175, false, 1); // height above range for negative longevity
+    const person2 = new Person(26, "female", 60, 120, true, 10);
     person.calculateLifeExpectancy();
     person2.calculateLifeExpectancy();
     expect(person.lifeExpectancy).toBeLessThan(76.1);

@@ -23,7 +23,11 @@ export class Person{
       default:
         return null;  //Unfortunately not enough data me to account for interex individuals at this time
     }
-
+    // calculate based on height. Data fom 2014 shows correlation between height and life duration. Specifically a divide between those above and below 5'2" resource : https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0094385
+    if(this.height >= 62){
+      const difference = this.height -62;
+      lifeExpectancy -= difference; //definitely not exact but will suffice. 1 year off for every inch above 62
+    }
     return lifeExpectancy;
   }
 }

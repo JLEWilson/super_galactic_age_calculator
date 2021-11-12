@@ -1,4 +1,3 @@
-import { EXPORTDECLARATION_TYPES } from '@babel/types';
 import {Person} from './../src/age_calculator';
 
 describe('Person', () => {
@@ -47,9 +46,16 @@ describe('Person', () => {
   });
 
   test('calculateLifeExpectancy method should also calculate expected life duration based on weight, seeing if bmi is over healthy range', () => {
-    const underWeightPerson = new Person(26, "male", 62, 500, false, 1); 
+    const overWeightPerson = new Person(26, "male", 62, 500, false, 1); 
 
-    underWeightPerson.calculateLifeExpectancy();
-    expect(underWeightPerson.lifeExpectancy).toBeLessThan(76.1);
+    overWeightPerson.calculateLifeExpectancy();
+    expect(overWeightPerson.lifeExpectancy).toBeLessThan(76.1);
+  });
+
+  test('calculateLifeExpectancy method should deduct years if Person isSmoker', () => {
+    const smokingPerson = new Person(26, "male", 62, 130, true, 1);
+    
+    smokingPerson.calculateLifeExpectancy();
+    expect(smokingPerson.lifeExpectancy).toBeLessThan(76.1);
   });
 });

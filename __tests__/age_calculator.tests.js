@@ -29,7 +29,14 @@ describe('Person', () => {
   test('calculateLifeExpectancy method should calculate expected life duration based on sex property and set outcome as lifeExpectancy property', () => {
     person.calculateLifeExpectancy();
     person2.calculateLifeExpectancy();
-    expect(person.lifeExpectancy).toEqual(expect.any(Number));
-    expect(person2.lifeExpectancy).toEqual(expect.any(Number));
+    expect(person.lifeExpectancy).toEqual(76.1);
+    expect(person2.lifeExpectancy).toEqual(81.1);
+  });
+
+  test('calculateLifeExpectancy method should also calculate expected life duration based on height property', () => {
+    person.calculateLifeExpectancy();
+    person2.calculateLifeExpectancy();
+    expect(person.lifeExpectancy).toBeLessThan(76.1);
+    expect(person2.lifeExpectancy).toEqual(81.1);
   });
 });

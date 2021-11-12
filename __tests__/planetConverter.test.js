@@ -11,12 +11,11 @@ describe('PlanetConverter', () => {
     planetConverter = new PlanetConverter(healthyMale);
   });
 
-  test('should create a planet object that contains a personObject and a map of planet year conversions', () =>{
-    
+  test('should create a planet object that contains a personObject and a map of planet year conversions', () => {
     expect(planetConverter.person.age).toEqual(26);
   });
 
-  test('calculateAge should take in a string and return it', () =>{
-    expect(planetConverter.calculateAge("mercury")).toEqual("mercury");
+  test('calculateAge should pass a string into a map, and return the map keys value multiplied by planetConverter.person.age', () => {
+    expect(planetConverter.calculateAge("mercury")).toEqual(6.24);
   });
 });

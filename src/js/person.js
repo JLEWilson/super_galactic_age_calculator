@@ -62,6 +62,7 @@ export default class Person{
     return lifeExpectancy;
   }
   calculateYearsRemaining(){
-    
+    let number = this. lifeExpectancy - this.age
+    return parseFloat(number.toFixed(1));
   }
 }

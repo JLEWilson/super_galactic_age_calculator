@@ -35,7 +35,15 @@ export class Person{
         lifeExpectancy -= 4.3;
       } else{
         lifeExpectancy -= 4.5;
+      } 
+    } else if(bmi > 24.9){
+      if (this.sex === "male"){
+        lifeExpectancy -= 4.2;
+      } else{
+        lifeExpectancy -= 3.5;
       }
+    } else{
+      //healthy range, leave lifeExpectancy the same
     }
     return lifeExpectancy;
   }

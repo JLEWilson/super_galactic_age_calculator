@@ -28,6 +28,15 @@ export class Person{
       const difference = this.height -62;
       lifeExpectancy -= difference; //definitely not exact but will suffice. 1 year off for every inch above 62
     }
+    //calculate based on weight/bmi resource https://www.thelancet.com/journals/landia/article/PIIS2213-8587(18)30288-2/fulltext
+    let bmi = 703 * this.weight / (this.height * this.height); // formula from the cdc https://www.cdc.gov/healthyweight/assessing/bmi/childrens_bmi/childrens_bmi_formula.html;
+    if(bmi < 18.50){
+      if(this.sex === "male"){
+        lifeExpectancy -= 4.3;
+      } else{
+        lifeExpectancy -= 4.5;
+      }
+    }
     return lifeExpectancy;
   }
 }

@@ -5,6 +5,7 @@ export default class PlanetConverter{
       [
         ["mercury", 0.24],
         ["venus", 0.62],
+        ["earth", 1],
         ["mars", 1.88],
         ["jupiter", 11.86],
         ["saturn", 29.457],

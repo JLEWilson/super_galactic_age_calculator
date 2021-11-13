@@ -1,7 +1,41 @@
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <title>Super Galactic Age Calculator</title>
 </head>
 <body>
-  <div>Project Template</div>
+  <div class="container flex-container">
+    <h1>Super Galactic Age Calculator!</h1>
+    <p>Greetings earthling! We have created a software that allows you to see how old you would be on other planets in orbiting Sol! Fill out the form below to see your results.</p>
+    <div class='box1'>
+      <form id="selections">
+        <label for="age" >Age in Earth years:</label>
+        <input type="number" placeholder="21" name="age" min="0" max="110" required>
+        <br>
+        <label title="Apologies to intersex individuals, not enough data" for="sex-select">Earthling Sex:</label>
+        <select name="sex-select" id="sex-select">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br>
+        <label for="height">Height in Earth inches:</label>
+        <input type="number" placeholder="60" name="height" min="5" max="100" required>
+        <br>
+        <label for="weight">Height in Earth inches:</label>
+        <input type="number" placeholder="100" name="weight" min="50" max="1000" required>
+        <br>
+        <label for="smoker">Do you consume the cigarette?</label>
+        <input type="checkbox" id="smoker" name="smoker">
+        <br>
+        <label for="drinks">Human adult beverage per Earth week consumed?</label>
+        <input type="number" placeholder="10" name="drinks" min="0" max="100" required>
+        <br>
+        <button type="submit" class="btn btn-warning">Submit Earthling Data</button>
+      </form>
+    </div>
+    <div class="box2">
+
+    </div>
+  </div>
 </body>
 </html>

@@ -23,6 +23,9 @@ export default class PlanetConverter{
   }
 
   calculateYearsRemaining(planet){
-
+    const ageInDays = this.person.yearsRemaining * 365.24;
+    const planetYearLength = this.conversions.get(planet) * 365.24;
+    const ageInPlanetYears = ageInDays / planetYearLength;
+    return parseFloat(ageInPlanetYears.toFixed(2));
   }
 }

@@ -31,7 +31,8 @@ Make sure to include information for package.jason and install
 * _Now that the repository is cloned to your computer, right click on the folder and click open with vs code_
 * _Now type npm install in your terminal to install the packages used in the project, you may have to run install twice due to the size of the packages_
 * _You can now view the project by typing npm run start in your terminal_
-
+* _OR_
+* _You can find the deployed project on gh-pages (here)[https://jlewilson.github.io/super_galactic_age_calculator/]
 ## Known Bugs
 
 * _No known bugs_

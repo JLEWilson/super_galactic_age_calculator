@@ -19,7 +19,7 @@ describe('PlanetConverter', () => {
     expect(planetConverter.calculateAge("mercury")).toEqual(108.33);
   });
 
-  test('calculateYearsRemaining should pass a string into objects conversions map, and return the map keys value*365.24 / 365 * planetConverter.person.yearsRemaining rounded to hundredths place', () => {
-    expect(planetConverter.calculateYearsRemaining("mercury")).toEqual();
-  });
+  // test('calculateYearsRemaining should pass a string into objects conversions map, and return the map keys value*365.24 / 365 * planetConverter.person.yearsRemaining rounded to hundredths place', () => {
+  //   expect(planetConverter.calculateYearsRemaining("mercury")).toEqual();
+  // });
 });

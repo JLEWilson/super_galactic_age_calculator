@@ -16,10 +16,12 @@ export default class PlanetConverter{
   }
 
   calculateAge(planet){
-
+    const ageInDays = this.person.age * 365.24;
+    const planetYearLength = this.conversions.get(planet) * 365.24;
+    const ageInPlanetYears = ageInDays / planetYearLength;
+    return parseFloat(ageInPlanetYears.toFixed(2));
   }
 
   calculateYearsRemaining(planet){
-
   }
 }

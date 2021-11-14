@@ -4,38 +4,74 @@
   <title>Super Galactic Age Calculator</title>
 </head>
 <body>
-  <div class="container flex-container">
-    <h1>Super Galactic Age Calculator!</h1>
-    <p>Greetings earthling! We have created a software that allows you to see how old you would be on other planets in orbiting Sol! Fill out the form below to see your results.</p>
-    <div class='box1'>
-      <form id="selections">
-        <label for="age" >Age in Earth years:</label>
-        <input type="number" placeholder="21" name="age" min="0" max="110" required>
-        <br>
-        <label title="Apologies to intersex individuals, not enough data" for="sex-select">Earthling Sex:</label>
-        <select name="sex-select" id="sex-select">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-        <br>
-        <label for="height">Height in Earth inches:</label>
-        <input type="number" placeholder="60" name="height" min="5" max="100" required>
-        <br>
-        <label for="weight">Height in Earth inches:</label>
-        <input type="number" placeholder="100" name="weight" min="50" max="1000" required>
-        <br>
-        <label for="smoker">Do you consume the cigarette?</label>
-        <input type="checkbox" id="smoker" name="smoker">
-        <br>
-        <label for="drinks">Human adult beverage per Earth week consumed?</label>
-        <input type="number" placeholder="10" name="drinks" min="0" max="100" required>
-        <br>
-        <button type="submit" class="btn btn-warning">Submit Earthling Data</button>
-      </form>
+  <section>
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+    <div class="star star6"></div>
+    <div class="star star7"></div>
+    <div class="star star8"></div>
+    <div class="container">
+      <h1>Super Galactic Age Calculator!</h1>
+      <p>Greetings earthling! We have created a software that allows you to see how old you would be on other planets in orbiting Sol! Fill out the form below to see your results.</p>
+      <div class="outer-flex-container">
+        <div class="inner-flex-container" id="outer-box1"s>
+          <div id='inner-box1'>
+            <form id="selections">
+              <div id="text-indent">
+                <label for="age" >Age in Earth years.</label>
+                <input class="form-input" type="number" name="age" id="age" min="0" max="110" required>
+                <br>
+                <label title="Apologies to intersex individuals, not enough data available for calculations" for="sex-select">Earthling Sex:</label>
+                <select class="form-input" name="sex-select" id="sex-select">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+                <br>
+                <label for="height">Height in Earth inches.</label>
+                <input class="form-input" type="number" name="height" id="height" min="1" max="1000" required>
+                <br>
+                <label for="weight">Weight in Earth lbs.</label>
+                <input class="form-input" type="number" name="weight" id="weight" min="1" max="1000" required>
+                <br>
+                <label for="smoker">Do you inhale human cigarettes?</label>
+                <input id="form-checkbox"type="checkbox" id="smoker" name="smoker">
+                <br>
+                <label for="drinks">Alcohols per earth week?</label>
+                <input class="form-input" type="number" name="drinks" id="drinks" min="0" max="100" required>
+                <br>
+              </div>
+              <button type="submit" class="btn" id="submit-data"">Submit Earthling Data</button>
+            </form>
+          </div>
+          <div id="inner-box2">
+            <h2>Sol planetary converter</h2>
+            <form id="planets">
+              <label for="planet-select">Select a homeworld.</label>
+              <br>
+              <select name="planet-select" class="form-input" id="planet-select">
+                <option value="mercury">Mercury</option>
+                <option value="venus">Venus</option>
+                <option value="earth" selected>Earth</option>
+                <option value="mars">Mars</option>
+                <option value="jupiter">Jupiter</option>
+                <option value="saturn">Saturn</option>
+                <option value="uranus">Uranus</option>
+                <option value="neptune">Neptune</option>
+              </select>
+              <br>
+              <button type="submit" class="btn" id="confirm-planet">Confirm Planet Selection</button>
+            </form>
+          </div>
+        </div>
+        <div id="outer-box2">
+          <h3>Age: <span id="output-age"></span> <span class="output-planet"> </span> years.</h3>
+          <h3><span id="output-time"></span>: <span id="output-years-remaining"></span> <span class="output-planet"></span> years.</h3>
+        </div>
+      </div>
     </div>
-    <div class="box2">
-
-    </div>
-  </div>
+  </section>
 </body>
 </html>

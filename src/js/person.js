@@ -14,14 +14,14 @@ export default class Person{
     let lifeExpectancy = 0;
     //Calculate based on sex. Data from 2017, resource used https://www.advisory.com/en/daily-briefing/2020/07/22/longevity#:~:text=As%20of%202017%2C%20life%20expectancy,with%2083.9%20years%20for%20men.
     switch(this.sex){
-      case "male":
-        lifeExpectancy += 76.1;
-        break;
-      case "female":
-        lifeExpectancy += 81.1;
-        break;
-      default:
-        return null;  //Unfortunately not enough data me to account for interex individuals at this time
+    case "male":
+      lifeExpectancy += 76.1;
+      break;
+    case "female":
+      lifeExpectancy += 81.1;
+      break;
+    default:
+      return null;  //Unfortunately not enough data me to account for interex individuals at this time
     }
     // calculate based on height. Data fom 2014 shows correlation between height and life duration. Specifically a divide between those above and below 5'2" resource : https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0094385
     if(this.height > 62){
@@ -62,7 +62,7 @@ export default class Person{
     return lifeExpectancy;
   }
   calculateYearsRemaining(){
-    let number = this. lifeExpectancy - this.age
+    let number = this. lifeExpectancy - this.age;
     return parseFloat(number.toFixed(1));
   }
 }

@@ -1,4 +1,4 @@
-# _Project Title_
+# _Super Galactic Age Calculator_
 
 #### By _**Jacob Wilson**_
 

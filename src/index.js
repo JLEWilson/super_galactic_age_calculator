@@ -22,9 +22,8 @@ $("#selections").submit((event) => {
   $("#outer-box2").show();
   $("#output-age").html(person.age);
   if(person.yearsRemaining < 0){       // I hope it's okay that I did this here instead of the business logic, this made more sense to me
-    const yearsSurpassed = -person.yearsRemaining;
     $("#output-time").html("Time survived passed expected ending");
-    $("#output-years-remaining").html(yearsSurpassed);
+    $("#output-years-remaining").html(-person.yearsRemaining);
   } else {
     $("#output-time").html("Time remaining");
     $("#output-years-remaining").html(person.yearsRemaining);

@@ -72,4 +72,9 @@ describe('Person', () => {
   test('calculateYearsRemaining should return life expectancy - age rounded to tenths place and set it as yearsRemaining', () => {
     expect(healthyMale.yearsRemaining).toEqual(50.1);
   });
+
+  test('calculateYearsExceeded should return 0 if yearsRemaining is > 0 and set it as a the yearsExceededExpectancy property of Person', () => {
+    expect(healthyMale.yearsExceededExpectancy).toEqual(0);
+  });
+
 });

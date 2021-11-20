@@ -8,8 +8,8 @@ export default class Person{
     this.drinksPerWeek = drinksPerWeek;
     this.lifeExpectancy = this.calculateLifeExpectancy();
     this.yearsRemaining = this.calculateYearsRemaining();
+    this.yearsExceededExpectancy = this.calculateYearsExceeded();
   }
-
   calculateLifeExpectancy() {
     let lifeExpectancy = 0;
     //Calculate based on sex. Data from 2017, resource used https://www.advisory.com/en/daily-briefing/2020/07/22/longevity#:~:text=As%20of%202017%2C%20life%20expectancy,with%2083.9%20years%20for%20men.
@@ -64,5 +64,8 @@ export default class Person{
   calculateYearsRemaining(){
     let number = this. lifeExpectancy - this.age;
     return parseFloat(number.toFixed(1));
+  }
+  calculateYearsExceeded(){
+
   }
 }

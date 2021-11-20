@@ -22,7 +22,6 @@ _An algorithm determines the users life expectancy based on information submitte
 
 ## Setup/Installation Requirements
 
-Make sure to include information for package.jason and install
 
 * _You can find the github repository [here](https://github.com/JLEWilson/super_galactic_age_calculator)_
 * _Click the code button, and copy the https link_
@@ -31,8 +30,10 @@ Make sure to include information for package.jason and install
 * _Now that the repository is cloned to your computer, right click on the folder and click open with vs code_
 * _Now type npm install in your terminal to install the packages used in the project, you may have to run install twice due to the size of the packages_
 * _You can now view the project by typing npm run start in your terminal_
+* _Now that all packages are installed you can test the __tests__ folder by typing npm run test in the terminal_
 * _OR_
-* _You can find the deployed project on gh-pages (here)[https://jlewilson.github.io/super_galactic_age_calculator/]
+* _You can find the deployed project on gh-pages [here](https://jlewilson.github.io/super_galactic_age_calculator/)_
+
 ## Known Bugs
 
 * _No known bugs_

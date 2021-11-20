@@ -29,6 +29,9 @@ export default class PlanetConverter{
     return parseFloat(ageInPlanetYears.toFixed(2));
   }
   calculateYearsExceeded(planet){
-    
+    const yearsExceededInDays = this.person.yearsExceededExpectancy * 365.24;
+    const planetYearLength = this.conversions.get(planet) * 365.24;
+    const ageInPlanetYears = yearsExceededInDays / planetYearLength;
+    return parseFloat(ageInPlanetYears.toFixed(2));
   }
 }

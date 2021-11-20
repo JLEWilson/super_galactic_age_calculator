@@ -22,4 +22,9 @@ describe('PlanetConverter', () => {
    test('calculateYearsRemaining should pass a string into objects conversions map, and return the map keys value*365.24 / 365 * planetConverter.person.yearsRemaining rounded to hundredths place', () => {
      expect(planetConverter.calculateYearsRemaining("mercury")).toEqual(208.75);
   });
+
+  test('calculateYearsExceeded should pass a string into objects conversions map, and return the map keys value*365.24 / person.yearsRemaining * 365 rounded to hundredths place* ', () => {
+    expect(planetConverter.calculateYearsExceeded("mercury")).toEqual(0);
+  });
+  
 });

@@ -28,4 +28,7 @@ export default class PlanetConverter{
     const ageInPlanetYears = ageInDays / planetYearLength;
     return parseFloat(ageInPlanetYears.toFixed(2));
   }
+  calculateYearsExceeded(planet){
+    
+  }
 }

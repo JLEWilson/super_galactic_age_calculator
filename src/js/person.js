@@ -66,6 +66,8 @@ export default class Person{
     return parseFloat(number.toFixed(1));
   }
   calculateYearsExceeded(){
-
+    if(this.yearsRemaining > 0){
+      return 0;
+    }
   }
 }

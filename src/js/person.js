@@ -68,6 +68,8 @@ export default class Person{
   calculateYearsExceeded(){
     if(this.yearsRemaining >= 0){
       return 0;
-    } e
+    } else {
+      return Math.abs(this.yearsRemaining);
+    }
   }
 }

@@ -78,5 +78,5 @@ describe('Person', () => {
   });
 
   test('calculateYearsExceeded should return the inverse of yearsRemaining if yearsRemaining is < 0 ')
-  expect(healthyMale.yearsExceededExpectancy).toGreaterThan(0);
+  expect(healthyMale.yearsExceededExpectancy).toBeGreaterThan(0);
 });

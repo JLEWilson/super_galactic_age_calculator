@@ -77,6 +77,8 @@ describe('Person', () => {
     expect(healthyMale.yearsExceededExpectancy).toEqual(0);
   });
 
-  test('calculateYearsExceeded should return the inverse of yearsRemaining if yearsRemaining is < 0 ')
-  expect(healthyMale.yearsExceededExpectancy).toBeGreaterThan(0);
+  test('calculateYearsExceeded should return the inverse of yearsRemaining if yearsRemaining is < 0 ', () => {
+    const oldPerson = new Person(100, "male", 62, 130, false, 28);
+    expect(oldPerson.yearsExceededExpectancy).toBeGreaterThan(0);
+  })
 });

@@ -23,8 +23,11 @@ describe('PlanetConverter', () => {
      expect(planetConverter.calculateYearsRemaining("mercury")).toEqual(208.75);
   });
 
-  test('calculateYearsExceeded should pass a string into objects conversions map, and return the map keys value*365.24 / person.yearsRemaining * 365 rounded to hundredths place* ', () => {
+  test('calculateYearsExceeded should pass a string into objects conversions map, and return the map keys value*365.24 / person.yearsRemaining * 365 rounded to hundredths place', () => {
+    const oldMale = new Person(100, "male", 62, 130, false, 1);
+    const planetConverter1 = new PlanetConverter(oldMale);
     expect(planetConverter.calculateYearsExceeded("mercury")).toEqual(0);
+    expect(planetConverter1.calculateYearsExceeded("mercury")).toBeGreaterThan(0);
   });
   
 });
